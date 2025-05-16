@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Jotish Guruji</title>
+
+  
+
+  
+
+
+</head>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Get form values
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Construct WhatsApp message
+      const fullMessage = `Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AMessage: ${message}`;
+
+      // WhatsApp number (change to your actual number with country code, no + or spaces)
+      const whatsappNumber = "+9779860416103";
+
+      // Open WhatsApp
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
+      window.open(whatsappURL, "_blank");
+    });
+  });
+</script>
+
+
+
+<body>
+  
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>Jotish</span>Guru<span>ji</span></h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="index.html#" data-after="Home">Home</a></li>
+            <li><a href="index.html#services" data-after="Service">Services</a></li>
+            <li><a href="planets.html" data-after="Projects">Planets(ग्रह)</a></li>
+            <li><a href="index.html#about" data-after="About">About</a></li>
+            <li><a href="contacts.html" data-after="Contact">Contact</a></li>
+            <li><a href="remedies.html" data-after="Notes">Remedies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+  
+   
+  <!-- contact section -->
+
+
+  <section id="contact-form" style="max-width: 500px; margin: 70px auto; padding: 70px;">
+
+
+    <h2 style="
+  font-size: 32px;
+  background: linear-gradient(to right, #368af7, #ffa726);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #000;
+">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp Icon" 
+       style="width: 36px; height: 36px;" />
+  Contact Us
+</h2>
+
+
+
+ <form id="contactForm">
+  <label for="name"><h1>Name:</h1></label><br/>
+  <input type="text" id="name" name="name" required 
+         style="width: 100%; padding: 14px 18px; font-size: 18px; border: none; border-radius: 10px; background: #f1f3f5; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;" /><br/><br/>
+
+  <label for="phone"><h1>Phone Number:</h1></label><br/>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required 
+         style="width: 100%; padding: 14px 18px; font-size: 18px; border: none; border-radius: 10px; background: #f1f3f5; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;" /><br/><br/>
+
+  <label for="email"><h1>Email:</h1></label><br/>
+  <input type="email" id="email" name="email" required 
+         style="width: 100%; padding: 14px 18px; font-size: 18px; border: none; border-radius: 10px; background: #f1f3f5; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;" /><br/><br/>
+
+  <label for="message"><h1>Message:</h1></label><br/>
+  <textarea id="message" name="message" rows="6" required
+            style="width: 100%; padding: 14px 18px; font-size: 18px; border: none; border-radius: 10px; background: #f1f3f5; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;"></textarea><br/><br/>
+
+  <button type="submit" 
+          style="width: 100%; padding: 16px; font-size: 18px; background-color: #007BFF; color: white; border: none; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,123,255,0.2); cursor: pointer; transition: background-color 0.3s ease, box-shadow 0.3s ease;">
+    Send Message
+  </button>
+</form>
+
+<p id="form-status" style="margin-top: 15px; font-weight: bold;"></p>
+
+</section>
+
+<script>
+  // Optional: Add focus effect with JS if you want
+  const inputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      input.style.borderColor = '#007BFF';
+      input.style.boxShadow = '0 0 5px rgba(0,123,255,0.5)';
+    });
+    input.addEventListener('blur', () => {
+      input.style.borderColor = '#ccc';
+      input.style.boxShadow = 'none';
+    });
+  });
+</script>
+
+
+
+      <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+<!-- Contact Section -->
+      <section id="contact">
+        <div class="contact container">
+          <div>
+            <h1 class="section-title">Contact <span>info</span></h1>
+          </div>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/3287/3287868.png" /></div>
+              <div class="contact-info">
+                <h1>PHONE</h1>
+                <h2>+9779860416103</h2>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/3178/3178283.png" /></div>
+              <div class="contact-info">
+                <h1>EMAIL</h1>
+                <h2>jotishguruji<br>@gmail.com</h2>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/6948/6948631.png" /></div>
+              <div class="contact-info">
+                <h1>Address</h1>
+                <h2>LUMBINI PRADESH <br>GHORAHI DANG</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+
+    
+    
+
+      
+      <h1><a href="index.html" class="cta">Previous Page</a></h1>
+  <!-- Footer -->
+  
+      <section id="footer">
+        <div class="footer container">
+          <div class="brand">
+            <h1><span>Jotish</span>Guru<span>ji</span></h1>
+          </div>
+          <h2>SERVICES   HOME-PAGE</h2>
+          <footer>
+          <div class="social-icon">
+            <div class="social-item">
+              <a href="index.html#services"><img src="https://cdn-icons-png.flaticon.com/512/788/788903.png" class="footer-icon" onclick="animateIcon()"  /></a>
+            </div>
+            <div class="social-item">
+              <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/4394/4394041.png" /></a>
+            </div>
+          </footer>
+            
+          </div>
+          <p>Copyright © 2025 Jotish Guruji. All rights reserved</p>
+        </div>
+      </section>
+      <!-- End Footer -->
+      <script src="./JAVA.JS"></script>
+    </body>
+    
+    </html>
+    
+
+
+
